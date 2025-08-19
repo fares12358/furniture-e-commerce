@@ -43,10 +43,10 @@ const Nav = () => {
                     </div>
                 </div>
                 <div className={` flex-col font-extralight text-[14px] light_clr items-center justify-center gap-5 uppercase py-5 overflow-hidden ${openMenu ? "flex h-fit " : "hidden h-[0px]"}`}>
-                    <Link href={'/'}>Home</Link>
-                    <Link href={'/pages/About'}>About</Link>
-                    <Link href={'/pages/Products'}>Products</Link>
-                    <Link href={'/pages/Contact'}>Contact</Link>
+                    <Link onClick={()=>{setOpenMenu(false)}} href={'/'}>Home</Link>
+                    <Link onClick={()=>{setOpenMenu(false)}} href={'/pages/About'}>About</Link>
+                    <Link onClick={()=>{setOpenMenu(false)}} href={'/pages/Products'}>Products</Link>
+                    <Link onClick={()=>{setOpenMenu(false)}} href={'/pages/Contact'}>Contact</Link>
                 </div>
             </div>
             {
