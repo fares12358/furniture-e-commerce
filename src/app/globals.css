@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+;
+
+.light_clr {
+  @apply text-[#4b5563];
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+;
+
+.light_clr2 {
+  @apply text-[#4b5563];
+}
+
+;
+
+.scrollbar_hide::-webkit-scrollbar {
+  display: none;
+}
+
+.anime {
+  animation: slideUp 3s ease-in-out infinite;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(-40px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-40px);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+.scale_anim {
+  animation: scale 3s ease-in-out infinite;
+}
+
+@keyframes scale {
+  0% {
+    scale: 0.8;
+  }
+
+  50% {
+    scale: 1;
+
+  }
+
+  100% {
+    scale: 0.8;
+
+  }
+}
+
+
+.scale_rot {
+  animation: scale-rot 3s ease-in-out infinite;
+}
+
+@keyframes scale-rot {
+  0% {
+    transform: rotate(25deg) scale(0.8);
+  }
+
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(25deg) scale(0.8);
+  }
+}
+
+
+.side_anim {
+  animation: slideside 3s ease-in-out infinite;
+}
+
+@keyframes slideside {
+  0% {
+    transform: translateX(-40px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-40px);
+  }
 }
