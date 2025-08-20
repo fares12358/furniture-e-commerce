@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useState } from 'react'
 
 const page = () => {
@@ -60,7 +61,7 @@ const page = () => {
                 className="flex flex-col items-start justify-start gap-1 p-0 max-w-full md:w-[250px] md:h-[400px] h-[400px] w-[200px]"
               >
                 {/* Card */}
-                <div className="bg-[#fafafa] rounded-xl w-full h-full relative overflow-hidden group cart hover:shadow cursor-pointer flex items-center justify-center p-4">
+                <Link href={'/pages/Checkout'} className="bg-[#fafafa] rounded-xl w-full h-full relative overflow-hidden group cart hover:shadow cursor-pointer flex items-center justify-center p-4">
                   <img
                     src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a0398/658ebbd3bddb427e12a5ff2e_pro-12-600x744.jpg.png"
                     alt="pro-1"
@@ -74,7 +75,7 @@ const page = () => {
                   <button className="block lg:hidden font-bold text-[10px] absolute bottom-5 rounded-sm bg-[#cda274] text-white py-2 w-[80%] left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out cursor-pointer">
                     Add To Cart
                   </button>
-                </div>
+                </Link>
 
                 {/* Info */}
                 <p className="font-medium text-md light_clr">sofa</p>
@@ -93,7 +94,7 @@ const page = () => {
                 className="flex flex-col items-start justify-start gap-1 p-0 max-w-full md:w-[250px] md:h-[400px] h-[400px] w-[200px]"
               >
                 {/* Card */}
-                <div className="bg-[#fafafa] rounded-xl w-full relative overflow-hidden group cart hover:shadow cursor-pointer flex items-center justify-center p-4">
+                <Link href={'/pages/Checkout'} className="bg-[#fafafa] rounded-xl w-full relative overflow-hidden group cart hover:shadow cursor-pointer flex items-center justify-center p-4">
                   <img
                     src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a0398/658eb68d3d98b9ecd515f407_526%201-6.png"
                     alt="pro-1"
@@ -107,7 +108,7 @@ const page = () => {
                   <button className="block lg:hidden font-bold text-[10px] absolute bottom-5 rounded-sm bg-[#cda274] text-white py-2 w-[80%] left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out cursor-pointer">
                     Add To Cart
                   </button>
-                </div>
+                </Link>
 
                 {/* Info */}
                 <p className="font-medium text-md light_clr">sofa</p>

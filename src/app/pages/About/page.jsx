@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link';
 import React, { useState } from 'react'
 
 const page = () => {
@@ -72,7 +73,7 @@ const page = () => {
         <div className="text-holder flex-1 flex flex-col gap-10 items-center md:items-start text-center md:text-start ">
           <h3 className='font-bold md:text-6xl text-3xl'>About FurniFlow</h3>
           <p className='text-2xl light_clr md:text-[20px] text-[15px] md:font-[100] font-[200]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
-          <button className='border md:py-3 py-2 px-20 font-bold text-xs md:text-md rounded-md w-fit max-w-full cursor-pointer'>Contact Us</button>
+          <Link href={'/pages/Contact'} className='border md:py-3 py-2 px-20 font-bold text-xs md:text-md rounded-md w-fit max-w-full cursor-pointer'>Contact Us</Link>
         </div>
       </div>
 
