@@ -102,6 +102,46 @@ export default function Home() {
         </div>
       </section>
 
+
+      <section className="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8 gap-8">
+        {/* Left Content */}
+        <div className="flex-1 flex flex-col items-start gap-4 order-2 lg:order-1">
+          <p className="uppercase text-gray-500 tracking-wide">Materials</p>
+          <h3 className="text-3xl lg:text-4xl font-bold leading-snug">
+            Highly Durable Materials <br /> For Crafting Furniture
+          </h3>
+          <p className="text-gray-600 max-w-md">
+            We were deeply committed to crafting furniture tailored for our surroundings,
+            investing significantly in a prestigious and renowned capital,
+            all while maintaining affordability.
+          </p>
+          <button className="flex items-center gap-2 text-[#cda274] font-bold hover:gap-3 transition-all cursor-pointer">
+            More Info
+            <span>→</span>
+          </button>
+        </div>
+
+        {/* Right Images */}
+        <div className="flex-1 grid grid-cols-4 gap-5 order-1 lg:order-2 md:p-10">
+          <img
+            src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/658c0da8bf5859f35996138a_Rectangle%201451.webp"
+            alt="sofa small"
+            className="w-full h-full object-cover rounded-xl"
+          />
+          <img
+            src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/658c0da846482d06855b7aa1_Rectangle%201446.webp"
+            alt="sofa large"
+            className="w-full h-full object-cover rounded-xl row-span-2 col-span-3"
+          />
+          <img
+            src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/658c0da743fa882a8ade1a90_Rectangle%201450.webp"
+            alt="chair"
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+      </section>
+
+
       {/* sup section */}
       <section
         className=" container mx-auto my-10 flex flex-col lg:flex-row items-center justify-between w-full h-[400px] relative rounded-none md:rounded-2xl overflow-hidden p-5 bg-cover bg-bottom-left"

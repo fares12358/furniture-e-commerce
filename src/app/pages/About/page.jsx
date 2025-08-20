@@ -21,22 +21,54 @@ const page = () => {
     [
       "https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/6592840418147d2fdfd14ec7_Rectangle%2023-3.webp", "Mark Andrew", "Marketer"
     ],
-  ])
+  ]);
+  const [openIndex, setOpenIndex] = useState(null);
+  const faqs = [
+    {
+      question: "What is MaWhat makes FurniFlow TNC furniture different from other options?ilFlow?",
+      answer:
+        "At FurniFlow TNC, our furniture stands out due to the perfect blend of style, quality, and affordability. We meticulously curate our collections, ensuring each piece reflects timeless design, superior craftsmanship, and a commitment to providing lasting value."
+    },
+    {
+      question: "How do I choose the right furniture for my space?",
+      answer:
+        "At FurniFlow TNC, our furniture stands out due to the perfect blend of style, quality, and affordability."
+    },
+    {
+      question: "How does FurniFlow TNC handle shipping and returns?",
+      answer:
+        "At FurniFlow TNC, our furniture stands out due to the perfect blend of style, quality, and affordability."
+    },
+    {
+      question: "What is MaWhat makes FurniFlow TNC furniture different from other options?ilFlow?",
+      answer:
+        "At FurniFlow TNC, our furniture stands out due to the perfect blend of style, quality, and affordability. We meticulously curate our collections, ensuring each piece reflects timeless design, superior craftsmanship, and a commitment to providing lasting value."
+    }, {
+      question: "What is MaWhat makes FurniFlow TNC furniture different from other options?ilFlow?",
+      answer:
+        "At FurniFlow TNC, our furniture stands out due to the perfect blend of style, quality, and affordability. We meticulously curate our collections, ensuring each piece reflects timeless design, superior craftsmanship, and a commitment to providing lasting value."
+    },
+  ];
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <div className='w-full h-fit container m-auto md:py-20 py-10 flex flex-col gap-20'>
       <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
         <div className="img-holder flex-1 grid grid-cols-3 items-center justify-center relative p-10 ">
           <img src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/65927b539be5f073ae1b5dfd_Rectangle%2064.webp" className='w-[200px] rounded-tl-[100px] scale_anim shadow-xl ' alt="img1" />
           <img src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/65927b52b33626629eda2fee_Rectangle%2067.webp" className='w-[150px] rounded-[20px] anime shadow-xl' alt="img1" />
-          <img src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/65927b52e661d2a04310f9c0_Rectangle%2069.webp" className='w-[180px] rounded-tr-[100px] anime  shadow-xl' alt="img1" style={{animationDelay:"1s"}} />
+          <img src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/65927b52e661d2a04310f9c0_Rectangle%2069.webp" className='w-[180px] rounded-tr-[100px] anime  shadow-xl' alt="img1" style={{ animationDelay: "1s" }} />
 
-          <img src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/65927b52bb045ff2084a0cdd_Rectangle%2066.webp" className=' w-[120px] rounded-bl-[50px] shadow-xl side_anim' alt="img1"  style={{animationDelay:"1.5s"}}/>
+          <img src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/65927b52bb045ff2084a0cdd_Rectangle%2066.webp" className=' w-[120px] rounded-bl-[50px] shadow-xl side_anim' alt="img1" style={{ animationDelay: "1.5s" }} />
           <img src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/65927b53139e1daa3730a959_Rectangle%2065.webp" className=' w-[160px] rounded-tr-[100px] shadow-xl scale_rot' alt="img1" />
           <img src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/65927b5203a2c3dd49128e9e_Rectangle%2071.webp" className='row-span-2 w-[200px] rounded-br-[100px] shadow-xl anime' alt="img1" />
 
           <img src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/65927b52384e262a4e371f01_Rectangle%2070.webp" className=' w-[150px] rounded-bl-[100px] shadow-xl side_anim' alt="img1" />
-          <img src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/65927b52fa4728dd2e0c31c6_Rectangle%2068.webp" className=' w-[120px] rounded-br-[50px] shadow-xl side_anim' alt="img1" style={{animationDelay:"1s"}} />
+          <img src="https://cdn.prod.website-files.com/658aac48be82ffc7cc4a036c/65927b52fa4728dd2e0c31c6_Rectangle%2068.webp" className=' w-[120px] rounded-br-[50px] shadow-xl side_anim' alt="img1" style={{ animationDelay: "1s" }} />
         </div>
+        
         <div className="text-holder flex-1 flex flex-col gap-10 items-center md:items-start text-center md:text-start ">
           <h3 className='font-bold md:text-6xl text-3xl'>About FurniFlow</h3>
           <p className='text-2xl light_clr md:text-[20px] text-[15px] md:font-[100] font-[200]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
@@ -94,6 +126,39 @@ const page = () => {
               </div>
             ))
           }
+        </div>
+      </div>
+
+      <div className="w-full mx-auto mt-8 flex flex-col gap-5 p-5">
+        <h3 className="text-2xl font-bold mb-4 self-center">FAQ</h3>
+        <p className="text-gray-600 mb-6 text-center self-center max-w-full md:w-2/3">
+          Explore common queries about hookah and its association in our FAQ
+          section, providing concise answers to enlighten enthusiasts alike.
+        </p>
+        <div className="w-full flex flex-col gap-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`border-l-2 px-4 cursor-pointer border-black`}
+              onClick={() => toggleFAQ(index)}
+            >
+              <div className="flex justify-between items-center">
+                <h4 className="font-semibold text-md">{faq.question}</h4>
+                <span className="text-xl">
+                  {openIndex === index ? "−" : "+"}
+                </span>
+              </div>
+              <div
+                className={`overflow-hidden transition-all duration-1000 ease-in-out`}
+                style={{
+                  maxHeight: openIndex === index ? "500px" : "0",
+                  opacity: openIndex === index ? 1 : 0,
+                }}
+              >
+                <p className="mt-2 text-gray-700 text-sm">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
